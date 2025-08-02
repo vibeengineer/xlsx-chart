@@ -6,11 +6,6 @@ var VError = require("verror");
 var fs = require("fs");
 var async = require("async");
 
-// Polyfill for File to prevent bundler issues
-if (typeof File === "undefined") {
-  global.File = function () {};
-}
-
 const CHART_TAG_BY_CHART_NAME = {
   bar: "c:barChart",
   column: "c:barChart",
